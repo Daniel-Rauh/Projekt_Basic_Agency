@@ -1,0 +1,170 @@
+/* Farbe: #f4f4f4 / #252422 / #f9cdcd */
+@font-face {
+    font-family: scto-bold;
+    src: url(../fonts/SctoGroteskA-Bold.woff2);
+}
+@font-face {
+    font-family: scto-medium;
+    src: url(../fonts/SctoGroteskA-Medium.woff2);
+}
+@font-face {
+    font-family: scto-regular;
+    src: url(../fonts/SctoGroteskA-Regular.woff2);
+}
+@keyframes noise {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-10%, 5%) }
+    30% { transform:translate(7%, -20%) }
+    40% { transform:translate(-5%, 20%) }
+    50% { transform:translate(-10%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 30%) }
+    90% { transform:translate(-10%, 10%) }
+}
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    color: #252422;
+    padding: 0 5%;
+}
+header{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+    z-index: 1;
+}
+header::after{
+    animation: noise 8s steps(10) infinite;
+    background-image: url(../img/base.png);
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    z-index: -1;
+}
+.logo{
+    width: 100px;
+}
+#large-nav a{
+    text-decoration: none;
+    color: #252422;
+    margin: 0 40px;
+    font-family: scto-regular;
+    font-size: .9rem;
+}
+#large-nav a:hover{
+    text-decoration: underline;
+}
+.active{
+    text-decoration: underline;
+}
+#hamburger div{
+    width: 7px;
+    height: 7px;
+    background: #252422;
+    position: absolute;
+    border-radius: 50%;
+}
+#hamburger div:nth-of-type(1){
+    right: 5%;
+}
+#hamburger div:nth-of-type(2){
+    right: calc(5% + 10px);
+}
+#hamburger div:nth-of-type(3){
+    right: calc(5% + 20px);
+}
+#hero {
+    padding: 10vh 0 25vh;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid #252422;
+}
+#hero::after{
+    animation: noise 8s steps(10) infinite;
+    background-image: url(../img/base.png);
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    z-index: -1;
+}
+#hero h1{
+    font-size: 4.5rem;
+    margin: 0;
+    font-family: scto-bold;
+}
+#hero h1:nth-of-type(2){
+    text-align: right;
+    position: relative;
+}
+.big-circle{
+    background: #252422;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.break{
+    display: block;
+}
+video{
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #252422;
+}
+h4{
+    font-family: scto-regular;
+    font-size: .9rem;
+    margin: 10px 0;
+}
+#hero>div{
+    display: flex;
+}
+.text{
+    width: 50%;
+}
+h2{
+    font-family: scto-medium;
+    font-size: 2rem;
+}
+.text h2{
+    margin-bottom: 40px;
+}
+.text a{
+    font-family: scto-medium;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #252422;
+    border: 1px solid #252422;
+    border-radius: 40px;
+    padding: 5px 20px;
+    transition: background .4s, color .2s;
+}
+.text a:hover{
+    background: #252422;
+    color: #f4f4f4;
+}
+.image{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.image img{
+    width: 40%;
+}
