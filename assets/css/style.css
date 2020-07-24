@@ -30,7 +30,6 @@ html{
 body{
     margin: 0;
     color: #252422;
-    padding: 0 5%;
 }
 header{
     height: 70px;
@@ -39,19 +38,8 @@ header{
     align-items: center;
     padding: 0 5%;
     position: relative;
-    z-index: 2;
-}
-header::after{
-    animation: noise 8s steps(10) infinite;
-    background-image: url(../img/base.png);
-    content: "";
-    height: 300%;
-    left: -50%;
-    opacity: .5;
-    position: fixed;
-    top: -100%;
-    width: 300%;
-    z-index: -1;
+    z-index: 3;
+    padding: 0 5%;
 }
 .logo{
     width: 100px;
@@ -86,9 +74,9 @@ header::after{
     right: calc(5% + 20px);
 }
 #hero {
-    padding: 10vh 0 25vh;
+    padding: 10vh 5% 25vh;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     border-bottom: 1px solid #252422;
 }
 #hero::after{
@@ -121,6 +109,9 @@ header::after{
 }
 .break{
     display: block;
+}
+.bold{
+    font-family: scto-bold;
 }
 video{
     width: 100%;
@@ -167,4 +158,210 @@ h2{
 }
 .image img{
     width: 40%;
+}
+#featured{
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    /* scroll-snap-type: x mandatory; */
+    position: relative;
+    z-index: 2;
+    padding: 20vh 0 0;
+}
+#featured h2 {
+    margin: 0 0 0 5.5%;
+}
+.scroll-box{
+    width: 150vw;
+    margin-top: 20vh;
+    display: flex;
+}
+.company-box{
+    margin: 0 5vw 10vh;
+    width: 30%;
+    scroll-snap-align: start;
+}
+.company{
+    height: 50px;
+    margin-bottom: 15px;
+}
+.scroll-box div:last-of-type img{
+    height: 35px;
+}
+.line{
+    width: 30px;
+    height: 10vh;
+    border-top: 2px solid #252422;
+}
+.company-box p:nth-of-type(1){
+    border-bottom: 1px solid #252422;
+    padding-bottom: 20px;
+}
+#connect{
+    background: #252422;
+    color: #f9cdcd;
+    padding: 15vh 5%;
+    display: flex;
+    position: relative;
+}
+.connect-text{
+    width: 50%;
+    padding-right: 10%;
+}
+#connect h1{
+    font-size: 4rem;
+    margin: 0;
+}
+#connect .big-circle{
+    background: #f9cdcd;
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+}
+#connect p{
+    font-family: scto-regular;
+    font-size: 0.9rem;
+    margin: 20px 0 10vh;
+}
+#connect a{
+    position: relative;
+    z-index: 2;
+    font-family: scto-medium;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #f9cdcd;
+    border: 1px solid #f9cdcd;
+    border-radius: 40px;
+    padding: 5px 20px;
+    transition: background .4s, color .2s;
+}
+#connect a:hover{
+    background: #f9cdcd;
+    color: #252422;
+}
+#connect video{
+    width: 40%;
+}
+#news{
+    background: #252422;
+    color: #f9cdcd;
+    padding: 5vh 5%;
+}
+#news h2{
+    margin: 0;
+}
+.news-box{
+    border-top: 1px solid #f9cdcd;
+    padding-top: 3vh;
+    margin-top: 6vh;
+    display: flex;
+
+}
+.news-image{
+    width: 25%;
+    position: relative;
+    z-index: 2;
+    margin-right: 1%;
+}
+.news-box:nth-of-type(1) .news-image{
+    background: url(../img/Adweek.jpg) center/cover no-repeat;
+}
+.news-box:nth-of-type(2) .news-image{
+    background: url(../img/brand.jpg) center/cover no-repeat;
+}
+.news-box:nth-of-type(3) .news-image{
+    background: url(../img/Furrion-Partnership.jpg) center/cover no-repeat;
+}
+.news-text{
+    height: 30vh;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.news-text h2{
+    font-family: scto-regular;
+}
+.news-text p{
+    margin: 0;
+    font-size: 0.9rem;
+}
+.divider{
+    display: inline-block;
+    width: 3%;
+}
+.news-arrow{
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.arrow{
+    background: url(../img/arrow.svg) center/contain no-repeat;
+    width: 10%;
+    height: 5vh;
+}
+footer{
+    background: #252422;
+    color: #f4f4f4;
+    padding: 15vh 5% 0;
+}
+footer>div{
+    display: flex;
+}
+.b-logo{
+    width: 50%;
+    margin-bottom: 15vh;
+}
+.b-logo-image{
+    background: url(../img/footer-logo.svg) center/contain no-repeat;
+    height: 50px;
+    width: 50px;
+}
+footer h3{
+    font-family: scto-regular;
+    width: 50%;
+    font-size: 1.6rem;
+}
+footer h3 a{
+    color: #f4f4f4;
+    position: relative;
+    z-index: 2;
+}
+#links{
+    padding-bottom: 15vh;
+}
+#links>div:nth-of-type(1){
+    width: 48%;
+    padding-right: 2%;
+}
+footer h4{
+    font-size: 1.1rem;
+    padding-bottom: 3vh;
+    margin: 0;
+}
+footer h4:nth-of-type(2){
+    border-bottom: 1px solid #f4f4f4;
+}
+footer .big-circle{
+    background: #f4f4f4;
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+}
+#links>div:not(:nth-of-type(1)){
+    width: 16.5%;
+}
+footer p{
+    font-size: 0.9rem;
+    margin: 0;
+}
+#copyright{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 5%;
+    background: #1f1e1c
+}
+#copyright p{
+    font-size: 0.8rem;
+    color: #494742;
 }
