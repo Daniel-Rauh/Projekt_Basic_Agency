@@ -368,7 +368,7 @@ h2{
 #news h2{
     margin: 0;
 }
-.news-box{
+.home-news-box{
     border-top: 1px solid #f9cdcd;
     padding-top: 3vh;
     margin-top: 6vh;
@@ -381,13 +381,13 @@ h2{
     z-index: 2;
     margin-right: 1%;
 }
-.news-box:nth-of-type(1) .featured-news-image{
+.home-news-box:nth-of-type(1) .featured-news-image{
     background: url(../img/Adweek.jpg) center/cover no-repeat;
 }
-.news-box:nth-of-type(2) .featured-news-image{
+.home-news-box:nth-of-type(2) .featured-news-image{
     background: url(../img/brand.jpg) center/cover no-repeat;
 }
-.news-box:nth-of-type(3) .featured-news-image{
+.home-news-box:nth-of-type(3) .featured-news-image{
     background: url(../img/Furrion-Partnership.jpg) center/cover no-repeat;
 }
 .news-text{
