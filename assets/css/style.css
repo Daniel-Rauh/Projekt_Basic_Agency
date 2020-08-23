@@ -80,17 +80,14 @@ header nav a{
 }
 #overlay{
     position: absolute;
-    height: 86vh;
+    height: 91vh;
     background: #252422;
     width: 90%;
     top: 0;
     right: -100%;
     color: #f9cdcd;
-    padding: 5%;
+    padding: 5% 5% 0 5%;
     font-family: scto-medium;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
     transition: right .5s;
 }
 #overlay>p{
@@ -126,21 +123,27 @@ header nav a{
 #close div:nth-of-type(2){
     transform: rotate(135deg) translate(8px,-11px);
 }
+.overlay-scroll2{
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    height: 83%;
+}
 #overlay-scroll{
     display: flex;
-    height: 80%;
+    height: 100%;
     width: 185%;
 }
 .overlay-box{
     width: 31%;
-    height: 90%;
+    height: 80%;
     padding: 0 1%;
     border-left: 1px solid #f9cdcd;
     position: relative;
 }
 .overlay-box div{
     width: 100%;
-    height: 77%;
+    height: 75%;
     transition: all .4s;
 }
 .overlay-box:nth-of-type(1) div{
@@ -279,15 +282,16 @@ h2{
     width: 40%;
 }
 #featured{
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    /* scroll-snap-type: x mandatory; */
     position: relative;
     z-index: 2;
     padding: 20vh 0 0;
 }
 #featured h2 {
     margin: 0 0 0 5.5%;
+}
+.scroll-box2{
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
 }
 .scroll-box{
     width: 150vw;
@@ -508,8 +512,10 @@ footer p{
     font-family: scto-bold;
 }
 #work-hero p{
-    width: 25%;
-    margin-left: 75%;
+    width: 35%;
+    margin-left: 65%;
+    font-family: scto-regular;
+    font-size: 1.1rem;
 }
 #work-grid{
     padding: 10vh 5% 10vh;
@@ -534,6 +540,7 @@ footer p{
 }
 .big-work h4{
     margin-bottom: 20vh;
+    font-size: 1.2rem;
 }
 .big-work p {
     margin-bottom: 5vh;
@@ -960,7 +967,7 @@ figure:nth-of-type(4):hover{
 #news-hero .big-circle{
     position: absolute;
     right: 5%;
-    top: 30%;
+    top: 60%;
 }
 #news-grid{
     padding: 1vh 5% 15vh;
@@ -1105,4 +1112,165 @@ figure:nth-of-type(4):hover{
 }
 #thinking-grid .news-box:nth-of-type(6) .news-image{
     background: url(../img/think5.jpg) center/cover no-repeat;
+}
+#contact-hero{
+    display: flex;
+    padding: 10vh 5% 25vh;
+}
+#contact-hero::after{
+    animation: noise 8s steps(10) infinite;
+    background-image: url(../img/base.png);
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    z-index: -1;
+}
+.contact-img{
+    background: url(../img/Contact-Header.jpg) center/cover no-repeat;
+    width: 40%;
+}
+.contact-text{
+    padding: 0 0 0 2%;
+    width: 50%;
+}
+.contact-text h1{
+    font-family: scto-bold;
+    font-size: 5rem;
+    margin-bottom: 2vh;
+}
+.contact-text h4{
+    margin: 0 0 15vh 0;
+    font-size: 0.6rem;
+    font-family: scto-regular;
+    width: 35%;
+}
+.contact-hero-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 15vh;
+}
+.contact-hero-grid h3{
+    font-family: scto-bold;
+    font-size: 1.2rem;
+    margin: 0 0 3vh 0;
+}
+.contact-hero-grid .big-circle{
+    width: 30px;
+    height: 30px;
+}
+.contact-hero-grid a{
+    color: #494742;
+}
+.contact-hero-grid a:hover{
+    text-decoration: none;
+}
+#offices{
+    margin: 0 5% 15vh;
+    padding: 2vh 0 0 0;
+    border-top: 1px solid #494742;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#offices .big-circle{
+    position: absolute;
+    right: 5%;
+    width: 10px;
+    height: 10px;
+}
+#offices img{
+    width: 95%;
+}
+#offices h4{
+    font-family: scto-regular;
+    font-size: 0.8rem;
+    margin-bottom: 10vh;
+}
+#offices h2{
+    margin: 0;
+    font-size: 1.5rem;
+    border-right: 1px solid #494742;
+    margin-right: 1%;
+}
+.offices-border-btm{
+    border-bottom: 1px solid #494742;
+    margin: 0 0 2vh 5%;
+}
+#offices p{
+    display: inline-block;
+    font-family: scto-medium;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+#offices p:nth-of-type(2){
+    margin-left: 83%;
+}
+#offices h3{
+    font-family: scto-bold;
+    margin: 0;
+    border-bottom: 1px solid #494742;
+    margin-bottom: 2vh;
+}
+.empty-border:not(:nth-of-type(1)){
+    border-right: 1px solid #494742;
+    width: 98.8%;
+    position: relative;
+}
+#offices .coverup{
+    background: #fff;
+    height: 45px;
+    width: 5px;
+    position: absolute;
+    right: -2px;
+    bottom: -20px;
+    border-bottom: 1px solid #fff;
+}
+#social{
+    margin: 0 5% 15vh;
+    padding: 2vh 0 0 0;
+    border-top: 1px solid #494742;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#social h4{
+    font-family: scto-regular;
+    font-size: 0.8rem;
+    margin-bottom: 10vh;
+}
+#social .big-circle{
+    position: absolute;
+    right: 5%;
+    width: 10px;
+    height: 10px;
+}
+#social h2{
+    margin-bottom: 2vh;
+}
+#social ul{
+    list-style: none;
+    padding: 0;
+}
+#social ul li{
+    margin-bottom: 2vh;
+}
+#social a{
+    font-family: scto-regular;
+    color: #494742;
+}
+#social h5{
+    font-family: scto-medium;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+#social h6{
+    font-family: scto-regular;
+    font-size: 1.1rem;
+    margin-top: 3vh;
+    padding-bottom: 3vh;
+    border-bottom: 1px solid #494742;
 }
